@@ -1,0 +1,24 @@
+### Multigets Data Products
+GET http://localhost:9200/products/_mget
+Content-Type: application/json
+
+{
+  "ids": ["1", "2", "3"]
+}
+
+### Multigets Multiple Indexes
+GET http://localhost:9200/_source/_mget
+Content-Type: application/json
+
+{
+  "docs": [
+    {
+      "_index": "products",
+      "_id": "1"
+    },
+    {
+      "_index": "customers",
+      "_id": "1"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+### Insert Data Customers to Index
+POST http://localhost:9200/customers/_doc/1
+Content-Type: application/json
+
+{
+  "name": "Asnur Ramdani",
+  "age": "22",
+  "address": "Jl. Raya Cipadung No. 9, Bandung, Jawa Barat, Indonesia",
+  "birthday": "1998-01-01"
+}
+
+### Get Customers Data from Index
+GET http://localhost:9200/customers/_doc/1
+
+### Search Customers Data from Index
+GET http://localhost:9200/customers/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match": {
+      "name": "Asnur"
+    }
+  }
+}
+
+
+### Insert Data Products to Index
+POST http://localhost:9200/products/_doc/1
+Content-Type: application/json
+
+{
+  "name": "Macbook Pro 2020",
+  "price": "20000000",
+  "description": "Macbook Pro 2020 with 16GB RAM and 1TB SSD"
+}
+
+### Get Products Data from Index
+GET http://localhost:9200/products/_doc/1
+
+### Search Products Data from Index
+GET http://localhost:9200/products/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match": {
+      "name": "Macbook"
+    }
+  }
+}
+
+### Insert Data Orders to Index
+POST http://localhost:9200/orders/_doc/1
+Content-Type: application/json
+
+{
+  "oderder_date": "2020-01-01",
+  "customer_id": "1",
+  "total_price": "60000000",
+  "products": [
+    {
+      "id": "1",
+      "name": "Macbook Pro 2020",
+      "price": "20000000",
+      "description": "Macbook Pro 2020 with 16GB RAM and 1TB SSD",
+      "quantity": "3"
+    }
+  ]
+}
+
+### Get Orders Data from Index
+GET http://localhost:9200/orders/_doc/1

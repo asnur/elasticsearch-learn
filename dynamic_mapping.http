@@ -1,0 +1,38 @@
+### Type Mapping Dynamic for Customers
+PUT http://localhost:9200/customers/_mapping
+Content-Type: application/json
+
+{
+  "date_detection": true,
+  "dynamic_date_formats": ["yyyy-MM-dd", "dd-MM-yyyy", "dd/MM/yyyy", "yyyy/MM/dd", "yyyy.MM.dd"],
+  "numeric_detection": true
+}
+
+### Get Mapping for Customers
+GET http://localhost:9200/customers/_mapping
+
+### Type Mapping Dynamic for Orders
+PUT http://localhost:9200/orders/_mapping
+Content-Type: application/json
+
+{
+  "date_detection": true,
+  "dynamic_date_formats": ["yyyy-MM-dd", "dd-MM-yyyy", "dd/MM/yyyy", "yyyy/MM/dd", "yyyy.MM.dd"],
+  "numeric_detection": true
+}
+
+### Get Mapping for Orders
+GET http://localhost:9200/orders/_mapping
+
+### Type Mapping Dynamic for Products
+PUT http://localhost:9200/products/_mapping
+Content-Type: application/json
+
+{
+  "date_detection": true,
+  "dynamic_date_formats": ["yyyy-MM-dd", "dd-MM-yyyy", "dd/MM/yyyy", "yyyy/MM/dd", "yyyy.MM.dd"],
+  "numeric_detection": true
+}
+
+### Get Mapping for Products
+GET http://localhost:9200/products/_mapping

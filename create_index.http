@@ -1,0 +1,14 @@
+### Create Index Customers
+PUT http://localhost:9200/customers
+
+### Create Index Products
+PUT http://localhost:9200/products
+
+### Create Index Orders
+PUT http://localhost:9200/orders
+
+### Create Index For Test
+PUT http://localhost:9200/tests
+
+### Show All Indices
+GET http://localhost:9200/_cat/indices?v

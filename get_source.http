@@ -1,0 +1,8 @@
+### Get Source Data Index Customer
+GET http://localhost:9200/customers/_source/1
+
+### Get All Data Index Customer
+GET http://localhost:9200/customers/_search
+
+### Check Exist Index Customer
+HEAD http://localhost:9200/customers/_doc/1
